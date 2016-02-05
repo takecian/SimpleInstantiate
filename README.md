@@ -31,7 +31,7 @@ import SimpleInstantiate
 class CustomTableViewCell: UITableViewCell, NibLoadableView {
 }
 
-tableView.register(CustomTableViewCell.self)
+tableView.registerNib(CustomTableViewCell.self)
 
 let cell = tableView.dequeueReusableCell(CustomTableViewCell.self)
 ```
