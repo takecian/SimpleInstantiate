@@ -24,6 +24,7 @@
 		AC3748691C636CB1008907E9 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3748681C636CB1008907E9 /* DemoUITests.swift */; };
 		AC3748741C636CC6008907E9 /* SimpleInstantiate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC37481E1C63690D008907E9 /* SimpleInstantiate.framework */; };
 		AC3748751C636CC6008907E9 /* SimpleInstantiate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC37481E1C63690D008907E9 /* SimpleInstantiate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC6322961C646ABA008CFB4A /* InstanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6322951C646ABA008CFB4A /* InstanceFactory.swift */; };
 		ACAD6E221C638B1D00BC2E11 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD6E201C638B1D00BC2E11 /* CustomTableViewCell.swift */; };
 		ACAD6E231C638B1D00BC2E11 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACAD6E211C638B1D00BC2E11 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		AC3748641C636CB1008907E9 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3748681C636CB1008907E9 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		AC37486A1C636CB1008907E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6322951C646ABA008CFB4A /* InstanceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceFactory.swift; sourceTree = "<group>"; };
 		ACAD6E201C638B1D00BC2E11 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		ACAD6E211C638B1D00BC2E11 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 				AC37483E1C63699B008907E9 /* UICollectionView+Register.swift */,
 				AC3748211C63690D008907E9 /* SimpleInstantiate.h */,
 				AC3748231C63690D008907E9 /* Info.plist */,
+				AC6322951C646ABA008CFB4A /* InstanceFactory.swift */,
 			);
 			path = SimpleInstantiate;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				AC37483D1C63696D008907E9 /* UITableView+Register.swift in Sources */,
 				AC37483C1C63696D008907E9 /* ReusableView .swift in Sources */,
 				AC37483B1C63696D008907E9 /* NibLoadableView.swift in Sources */,
+				AC6322961C646ABA008CFB4A /* InstanceFactory.swift in Sources */,
 				AC37483F1C63699B008907E9 /* UICollectionView+Register.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
