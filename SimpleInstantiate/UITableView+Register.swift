@@ -14,7 +14,7 @@ public extension UITableView {
         registerClass(T.self, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
     
-    public func register<T: UITableViewCell where T: ReusableView, T: NibLoadableView>(_: T.Type) {
+    public func registerNib<T: UITableViewCell where T: ReusableView, T: NibLoadableView>(_: T.Type) {
         let bundle = NSBundle(forClass: T.self)
         let nib = UINib(nibName: T.nibName, bundle: bundle)        
         registerNib(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)

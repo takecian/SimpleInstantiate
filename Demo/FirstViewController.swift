@@ -16,7 +16,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.registerClass(UITableViewCell.self)
-        tableView.register(CustomTableViewCell.self)
+        tableView.registerNib(CustomTableViewCell.self)
     }
 
     override func didReceiveMemoryWarning() {
