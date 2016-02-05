@@ -8,13 +8,31 @@ SimpleInstantiate is pure Swift library which instantiates objects in simple way
 * Instantiate UICollectionViewCell without Cell Reuse Identifier
 * Instantiate UIView from xib without specifying xib file name
 
+
 # Install
 
+## Cocoapods
 ```Podfile
 pod 'SimpleInstantiate'
 ```
 
+## Directly
+
+Drag & drop files in SimpleInstantiate directory into your project.
+
 # Usage
+
+## Instantiate Custom UIView from xib
+
+```
+class CustomView: UIView, NibLoadableView {
+}
+
+let view = InstanceFactory.createInsntance(CustomView.self)
+
+```
+
+Note: Xib file name should be same as class name.(e.g. 'CustomView.swift' and 'CustomView.xib')
 
 ## UITableView without xib
 
