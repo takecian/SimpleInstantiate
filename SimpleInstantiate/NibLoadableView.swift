@@ -18,7 +18,7 @@ public extension NibLoadableView where Self: UIView {
         return NSStringFromClass(self).componentsSeparatedByString(".").last!
     }
     
-    public static func createInstance<T: UIView where T: NibLoadableView>(_: T.Type) -> T {
+    public static func createInstance<T: UIView where T: NibLoadableView>() -> T {
         return UINib(nibName: T.nibName, bundle: nil).instantiateWithOwner(self, options: nil)[0] as! T
     }
 
