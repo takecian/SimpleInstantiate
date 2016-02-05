@@ -6,7 +6,6 @@ SimpleInstantiate is pure Swift library which instantiates objects in simple way
 
 * Instantiate UITableViewCell without Cell Reuse Identifier
 * Instantiate UICollectionViewCell without Cell Reuse Identifier
-* You don't need to prepare Cell Reuse Identifier fo
 
 # Install
 
@@ -14,7 +13,7 @@ SimpleInstantiate is pure Swift library which instantiates objects in simple way
 pod 'SimpleInstantiate'
 ```
 
-# Useage
+# Usage
 
 ## UITableView without xib
 
