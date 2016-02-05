@@ -13,8 +13,14 @@ public protocol NibLoadableView: class {
 }
 
 public extension NibLoadableView where Self: UIView {
+
     public static var nibName: String {
         return NSStringFromClass(self).componentsSeparatedByString(".").last!
     }
+    
+    public static func createInstance<T: UIView where T: NibLoadableView>(_: T.Type) -> T {
+        return UINib(nibName: T.nibName, bundle: nil).instantiateWithOwner(self, options: nil)[0] as! T
+    }
+
 }
 
