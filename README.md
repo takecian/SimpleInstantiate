@@ -44,7 +44,6 @@ let cell = tableView.dequeueReusableCell(CustomTableViewCell.self)
 ## UITableView with xib
 
 ```
-import SimpleInstantiate
 class CustomTableViewCell: UITableViewCell, NibLoadableView {
 }
 
