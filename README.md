@@ -28,7 +28,7 @@ Drag & drop files in SimpleInstantiate directory into your project.
 class CustomView: UIView, NibLoadableView {
 }
 
-let view = InstanceFactory.createInsntance(CustomView.self)
+let view = SimpleInstantiate.createInsntance(CustomView.self)
 
 ```
 
