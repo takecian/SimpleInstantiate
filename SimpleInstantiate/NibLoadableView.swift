@@ -15,7 +15,7 @@ public protocol NibLoadableView: class {
 public extension NibLoadableView where Self: UIView {
 
     public static var nibName: String {
-        return NSStringFromClass(self).componentsSeparatedByString(".").last!
+        return NSStringFromClass(self).components(separatedBy: ".").last!
     }
     
 }

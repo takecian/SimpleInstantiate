@@ -10,18 +10,18 @@ import UIKit
 
 public extension UICollectionView {
 
-    public func registerClass<T: UICollectionViewCell where T: ReusableView>(_: T.Type) {
-        registerClass(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
+    public func registerClass<T: UICollectionViewCell>(_: T.Type) where T: ReusableView {
+        self.register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
     
-    public func registerNib<T: UICollectionViewCell where T: ReusableView, T: NibLoadableView>(_: T.Type) {
-        let bundle = NSBundle(forClass: T.self)
+    public func registerNib<T: UICollectionViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
+        let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.nibName, bundle: bundle)
-        registerNib(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
+        self.register(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
     
-    public func dequeueReusableCell<T: UICollectionViewCell where T: ReusableView>(_: T.Type, forIndexPath: NSIndexPath) -> T {
-        guard let cell = dequeueReusableCellWithReuseIdentifier(T.defaultReuseIdentifier, forIndexPath: forIndexPath) as? T else {
+    public func dequeueReusableCell<T: UICollectionViewCell>(_: T.Type, forIndexPath: IndexPath) -> T where T: ReusableView {
+        guard let cell = self.dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: forIndexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
         }
         
