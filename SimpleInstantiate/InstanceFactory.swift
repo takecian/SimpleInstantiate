@@ -10,7 +10,7 @@ import UIKit
 
 public class InstanceFactory: NSObject {
 
-    public static func createInstance<T: UIView where T: NibLoadableView>(_: T.Type) -> T {
+    public static func createInstance<T: UIView>(_: T.Type) -> T where T: NibLoadableView {
         return UINib(nibName: T.nibName, bundle: nil).instantiate(withOwner: self, options: nil)[0] as! T
     }
     
