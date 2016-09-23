@@ -15,6 +15,12 @@ SimpleInstantiate is pure Swift library which instantiates objects in simple way
 pod 'SimpleInstantiate'
 ```
 
+## Carthage
+
+```
+github "takecian/SimpleInstantiate" "0.1.1"
+```
+
 ## Directly
 
 Drag & drop files in SimpleInstantiate directory into your project.
