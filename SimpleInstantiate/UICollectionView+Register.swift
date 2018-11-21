@@ -10,17 +10,17 @@ import UIKit
 
 public extension UICollectionView {
 
-    public func registerClass<T: UICollectionViewCell>(_: T.Type) where T: ReusableView {
+    public func registerClass<T: UICollectionViewCell>(_: T.Type) {
         self.register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
     
-    public func registerNib<T: UICollectionViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
+    public func registerNib<T: UICollectionViewCell>(_: T.Type) where T: NibLoadableView {
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         self.register(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
     
-    public func dequeueReusableCell<T: UICollectionViewCell>(_: T.Type, forIndexPath: IndexPath) -> T where T: ReusableView {
+    public func dequeueReusableCell<T: UICollectionViewCell>(_: T.Type, forIndexPath: IndexPath) -> T {
         guard let cell = self.dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: forIndexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.defaultReuseIdentifier)")
         }
