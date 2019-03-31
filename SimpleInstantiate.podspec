@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SimpleInstantiate"
-  s.version      = "0.2.1"
+  s.version      = "1.2.0"
   s.summary      = "Simple way to instantiate in Swift."
   s.homepage     = "https://github.com/takecian/SimpleInstantiate"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.source_files  = "SimpleInstantiate/*.swift"
 
   s.social_media_url = 'https://twitter.com/takecian'
-  s.swift_version    = '4.2'
+  s.swift_version    = '5.0'
 
 end
